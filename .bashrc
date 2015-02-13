@@ -20,7 +20,8 @@ export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
 
-#Running Emacs in daemon mode as default editor
+#Using Emacs in daemon mode
+#Emacs is default editor
 export ALTERNATE_EDITOR=""
 export EDITOR='emacsclient -ct'
 

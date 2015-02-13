@@ -1,5 +1,5 @@
 ;;AUTHOR: Steffen Schmid
-;;DATE: 2015-02-07
+;;DATE: 2015-02-13
 ;;TITLE: My GNU Emacs conifg file
 ;===========================================================================================================
 
@@ -168,6 +168,7 @@
 (define-key global-map (kbd "C-c a") 'org-agenda-list) ; Org Weekly Agenda
 (define-key global-map (kbd "C-c e") 'eshell); Emacs Shell
 (define-key global-map (kbd "C-c s") 'magit-status); Git status
+(define-key global-map (kbd "C-x C-b") 'ibuffer); Nicer buffer overview
 
 ;============================================================================================================
 
