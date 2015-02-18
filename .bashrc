@@ -20,13 +20,8 @@ export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
 export JAVA_FONTS=/usr/share/fonts/TTF
 
-#Using Emacs in daemon mode
 #Emacs is default editor
-export ALTERNATE_EDITOR=""
-export EDITOR='emacsclient -ct'
-
-alias emacs="/usr/bin/emacsclient -ct"
-alias ed="/usr/bin/emacs --daemon"
+export EDITOR='emacs'
 
 # if [[ -z "$TMUX" ]] ;then
 #     ID="`tmux ls | grep -vm1 attached | cut -d: -f1`" # get the id of a deattached session
