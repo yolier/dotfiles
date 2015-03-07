@@ -1,0 +1,53 @@
+" Pentadactylrc from YoLieR
+" Date: 2015-03-07
+" Some settings come originally from: 
+" https://github.com/claytron/dotfiles/blob/master/.pentadactylrc 
+
+" Load Plugins
+loadplugins '\.(js|penta)$'
+group user
+
+" Set color scheme
+colorscheme solarized-light
+
+" Use home row letters for hints instead of numbers
+set hintkeys=asdfghjkl
+" Displaying hints uppercase but work with lowercase letters
+highlight -a Hint text-transform: uppercase;
+
+" show URLs of links (on hover or other focus) in command line
+set showstatuslinks='command'
+
+" Use vim as editor
+set editor="/usr/bin/vim"
+
+" remove the right and bottom scrollbars
+set guioptions-=rb
+
+" set wild mode to show completions as you type
+set wildmode="list:full"
+
+" fix completion list so search engines don't kill tabbing
+set complete=lS
+
+" show up to 35 items in the completion list
+set maxitems=35
+
+" only show the tab bar if there are more than 1 tabs
+set showtabline=multitab
+
+" find as you type
+set incfind
+
+" highlight the terms
+set hlfind
+
+" search should not be case sensetive 
+set findcase=smart
+
+" Set up google as the default search engine
+set defsearch=google
+
+" smooth scroll setting
+set scrollsteps=20
+set scrolltime=200
