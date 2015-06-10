@@ -51,7 +51,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux web-search sudo)
+plugins=(git archlinux web-search sudo vi-mode)
 
 # User configuration
 
@@ -65,9 +65,9 @@ source $ZSH/oh-my-zsh.sh
 
 #Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='emacs'
+  export EDITOR='vim'
 else
-  export EDITOR='emacs'
+  export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -86,11 +86,18 @@ fi
 alias grep='grep --color=tty -d skip'
 alias cp='cp -i'
 alias df='df -h'
+alias mariadb='mysql'
 
+# Tmux config
 alias tmxn='tmux new -s'
 alias tmxj='tmux a -t'
 alias tmxk='tmux kill-session -t'
 alias tmxls='tmux ls'
+alias ta='tmux attach'
+
+# todo.txt-cli config
+alias t='todo.sh'
+export TODOTXT_DEFAULT_ACTION=ls
 
 ##-----------------------------------------------------------------------------------------------------------------------------------
 
