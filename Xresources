@@ -1,3 +1,6 @@
+# Xresource file
+# YoLieR - 2015-09-28
+
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -9,6 +12,12 @@ Xft.lcdfilter: lcddefault
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
+Rxvt*geometry:        1920x1080
+URxvt*font:            xft:terminus:size=12
+URxvt*urlLauncher:     firefox
+URxvt*scrollBar:       true
+URxvt*scrollBar_right: true
+
 URxvt.perl-ext-common: default,matcher,clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
@@ -16,45 +25,62 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.perl-ext-common: ..., fullscreen, ...
 URxvt.keysym.F11: perl:fullscreen:switch
 
-!------------------------------------------------------------------------------
-! c o l o r -  s e t t i n g s
-! copied from https://bbs.archlinux.org/viewtopic.php?pid=431297#p431297
+# Color Schema - Solarized light
+# Colors can be found at https://github.com/solarized/xresources
 
-*background: #222222
-*foreground: #777777
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
 
-! Default
-! 0: black
-*color0:  #222222
-*color8:  #222222
-! 1: red
-*color1:  #9f6767
-*color9:  #9f6767
-! 2: green
-*color2:  #92ac68
-*color10: #92ac68
-! 3: yellow
-*color3:  #d0d293
-*color11: #d0d293
-! 4: blue
-*color4:  #9aacc3
-*color12: #9aacc3
-! 5: magenta
-*color5:  #bb77a4
-*color13: #bb77a4
-! 6: cyan
-*color6:  #77bbb5
-*color14: #77bbb5
-! 7: white
-*color7:  #777777
-*color15: #777777
+*background:            S_base3
+*foreground:            S_base00
+*fadeColor:             S_base3
+*cursorColor:           S_base01
+*pointerColorBackground:S_base1
+*pointerColorForeground:S_base01
 
-!------------------------------------------------------------------------------
-! u r x v t
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
-URxvt*geometry:        1920x1080
-URxvt*font:            xft:terminus:size=12
-URxvt*urlLauncher:     firefox
-URxvt*scrollBar:       false
-URxvt*scrollBar_right: true
-URxvt*scrollColor:     #000000
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3

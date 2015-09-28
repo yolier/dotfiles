@@ -1,10 +1,14 @@
-" Enable Pathogen
+" vim configuration file
+" YoLieR - 2015-09-28
+
+" Enable Pathogen execute pathogen#infect()
 execute pathogen#infect()
+syntax on
 filetype plugin indent on
 
 " Set color scheme
 syntax enable
-set background=dark
+set background=light
 "let g:solarized_termcolors=256
 colorscheme solarized
 
@@ -23,6 +27,8 @@ set autoindent
 set incsearch
 set hlsearch
 set history=50
+set splitbelow
+set splitright
 let g:vim_markdown_folding_disabled=1
 
 
@@ -47,7 +53,7 @@ let g:syntastic_check_on_wq = 0
 " Some small configs to use NERDTree more effectively
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | e
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | e
 map <Leader>n :NERDTreeToggle<CR>
 
 " Custom Key Maps
@@ -60,3 +66,7 @@ nmap tc b~e
 map <Leader>id :r! date "+\%Y-\%m-\%d"<CR>
 "map <Leader>lc :Latexmk<CR>
 "map <Leader>lv :LatexView<CR>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
