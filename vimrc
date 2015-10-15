@@ -1,16 +1,48 @@
-" vim configuration file
-" YoLieR - 2015-09-28
+" Vim configuration file
+" YoLieR - 2015-10-15
 
-" Enable Pathogen execute pathogen#infect()
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+" Manage all the Plugins using Vundle
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'godlygeek/tabular'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-repeat'
+Plugin 'mattn/emmet-vim'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+Plugin 'tpope/vim-markdown'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'Raimondi/delimitMate'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'freitass/todo.txt-vim'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " Set color scheme
 syntax enable
-set background=light
-"let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
+set background=dark
 
 " Vairios sets
 set laststatus=2
@@ -30,6 +62,7 @@ set history=50
 set splitbelow
 set splitright
 let g:vim_markdown_folding_disabled=1
+let g:instant_markdown_autostart = 0
 
 
 " Ctrlp config

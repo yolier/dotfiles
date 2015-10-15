@@ -2,7 +2,7 @@
 
 A few of my personal config files.
 
-I gathered a lot of the configs from other people or organisations. Special thanks to all of them.  
+I gathered a lot of the configs from other people or organisations. Special thanks to all of them.
 Most of the time I've linked to the original resources inside the config files.
 
 Feel free to try out everything.
