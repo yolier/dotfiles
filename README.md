@@ -7,7 +7,6 @@ Most of the time I've linked to the original resources inside the config files.
 
 Feel free to try out everything.
 If you have tips for improvements, or you know some packages I don't use jet,
-please contact me at https://twitter.com/YoLieRYYI or write me an Email at:
-steffenschmid94(at)gmx(dot)de
+please write me an Email at: steffenschmid94(at)gmx(dot)de
 
 Published under the CC0 1.0 Universal License.
