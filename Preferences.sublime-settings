@@ -1,0 +1,41 @@
+// Theme: 			https://github.com/nsubiron/sublime-theme-solarized-space
+// Color-scheme: 	https://github.com/quimcalpe/sublime-creamy-theme
+
+// Dictionary:		https://github.com/titoBouzout/Dictionaries
+
+// Packages: TODO
+
+{
+	"theme": "Solarized Space Light.sublime-theme",
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/Color Scheme - Creamy/Creamy.tmTheme",
+
+	"dictionary": "Packages/Dictionaries/German.dic",
+
+	"GOPAHT": "",
+
+	"added_words":
+	[
+	],
+
+	"font_face": "Consolas",
+	"font_size": 10,
+	"font_options": "subpixel_antialias",
+
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"rulers":
+	[
+		120
+	],
+	"scroll_past_end": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "auto",
+	"wrap_width": 120,
+
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+}
