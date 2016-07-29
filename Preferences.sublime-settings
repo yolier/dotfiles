@@ -1,9 +1,30 @@
-// Theme: 			https://github.com/nsubiron/sublime-theme-solarized-space
-// Color-scheme: 	https://github.com/quimcalpe/sublime-creamy-theme
+/*
+YoLieR -- 2016-07-29
 
-// Dictionary:		https://github.com/titoBouzout/Dictionaries
+Theme 				  : https://packagecontrol.io/packages/Theme%20-%20Solarized%20Space
+Color-scheme 		  : https://packagecontrol.io/packages/Color%20Scheme%20-%20Creamy
 
-// Packages: TODO
+Packages
+	Alignment         : https://packagecontrol.io/packages/Alignment
+	AutoFileName      : https://packagecontrol.io/packages/AutoFileName
+	BracketHighlighter: https://packagecontrol.io/packages/BracketHighlighter
+	DocBlockr         : https://packagecontrol.io/packages/DocBlockr
+	Dictionary        : https://packagecontrol.io/packages/Dictionaries
+	Git               : https://packagecontrol.io/packages/Git
+	GitGutter         : https://packagecontrol.io/packages/GitGutter
+	GoogleSearch      : https://packagecontrol.io/packages/Google%20Search
+	HexViewer         : https://packagecontrol.io/packages/HexViewer
+	Markdown Preview  : https://packagecontrol.io/packages/Markdown%20Preview
+	MarkdownEditiong  : https://packagecontrol.io/packages/MarkdownEditing
+	Non Text Files    : https://packagecontrol.io/packages/Non%20Text%20Files
+	Package Control   : https://packagecontrol.io/packages/Package%20Control
+	PlainTasks        : https://packagecontrol.io/packages/PlainTasks
+	Sublimerge 3      : https://packagecontrol.io/packages/Sublimerge%203
+	SideBarEnhancement: https://packagecontrol.io/packages/SideBarEnhancements
+	SideBarFolders:	  : https://packagecontrol.io/packages/SideBarFolders
+	SVN               : https://packagecontrol.io/packages/SVN
+	TrailingSpaces    : https://packagecontrol.io/packages/TrailingSpaces
+ */
 
 {
 	"theme": "Solarized Space Light.sublime-theme",
@@ -12,8 +33,6 @@
 	"color_scheme": "Packages/Color Scheme - Creamy/Creamy.tmTheme",
 
 	"dictionary": "Packages/Dictionaries/German.dic",
-
-	"GOPAHT": "",
 
 	"added_words":
 	[
@@ -38,4 +57,12 @@
 	[
 		"Vintage"
 	],
+
+	"prevent_bin_preview": true,
+	"open_externally_patterns": [
+    "*.gif",
+    "*.zip",
+    "*.pdf",
+    "*.vsdx",
+	]
 }
