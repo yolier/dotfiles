@@ -1,7 +1,7 @@
 ;;AUTHOR: Steffen Schmid
 ;;DATE: 18.09.2016
 ;;TITLE: Spacemacs Config
-; =====================================================================================================
+;=====================================================================================================
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -14,12 +14,13 @@
      c-c++
      emacs-lisp
      elfeed
+     evil-commentary
      eyebrowse
      git
      github
      haskell
      html
-     ibuffer
+     (ibuffer :variables ibuffer-group-buffers-by nil)
      javascript
      latex
      markdown
@@ -32,6 +33,7 @@
      sql
      syntax-checking
      themes-megapack
+     vim-powerline
      )
    dotspacemacs-additional-packages '(
                                       ox-reveal
@@ -89,7 +91,7 @@
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup "trailing"
+   dotspacemacs-whitespace-cleanup 'trailing
    ))
 
 (defun dotspacemacs/user-init ()
@@ -203,7 +205,7 @@
   (setq display-time-day-and-date t
         display-time-24hr-format t)
   (display-time)
-  
+
 ; use fancy symbols
   (global-prettify-symbols-mode t)
 
@@ -222,5 +224,6 @@
 
 )
 
-
-;; ====================================================================================================
+;; ===============================================================================================================================================================================================
+;; Do not write anything past this comment. This is where Emacs will
+;; auto-generate custom variable definitions.
