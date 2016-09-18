@@ -6,7 +6,7 @@
 export ZSH=/path/to/.oh-my-zsh
 
 # Theme
-ZSH_THEME="sunrise"
+ZSH_THEME="lambda"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -77,6 +77,3 @@ alias tmxn="tmux new -s"
 alias tmxj="tmux a -t"
 alias tmxk="tmux kill-session -t"
 alias df="df -h"
-
-export TODOTXT_DEFAULT_ACTION=ls
-alias t='todo.sh -d /path/to/.todo.cfg'

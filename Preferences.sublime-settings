@@ -53,16 +53,4 @@ Packages
 	"word_wrap": "auto",
 	"wrap_width": 120,
 
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-
-	"prevent_bin_preview": true,
-	"open_externally_patterns": [
-    "*.gif",
-    "*.zip",
-    "*.pdf",
-    "*.vsdx",
-	]
 }
