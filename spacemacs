@@ -1,5 +1,5 @@
 ;;AUTHOR: Steffen Schmid
-;;DATE: 18.09.2016
+;;DATE: 19.09.2016
 ;;TITLE: Spacemacs Config
 ;=====================================================================================================
 
@@ -18,6 +18,7 @@
      eyebrowse
      git
      github
+     go
      haskell
      html
      (ibuffer :variables ibuffer-group-buffers-by nil)
@@ -30,6 +31,7 @@
      shell
      speed-reading
      spell-checking
+     spotify
      sql
      syntax-checking
      themes-megapack
@@ -102,6 +104,13 @@
 
 (defun dotspacemacs/user-config ()
 
+  (setq gofmt-command "goimports")
+
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
   (setq powerline-default-separator 'slant)
 
   (elfeed-org)
@@ -116,6 +125,11 @@
   (push '(hackage
           :name "Hackage Search"
           :url "https://hackage.haskell.org/packages/search?terms=%s")
+        search-engine-alist)
+
+  (push '(godoc
+          :name "Godoc Search"
+          :url "https://godoc.org/?q=%s")
         search-engine-alist)
 
 ; Org Mode Config
