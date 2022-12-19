@@ -1,0 +1,59 @@
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+set nu
+set relativenumber
+
+set hlsearch                      " highlight search occurrences
+set ignorecase                    " ignore case in search patterns
+set smartcase                     " no ignore case when pattern is uppercase
+set incsearch                     " show search results while typing
+set wrapscan                      " searches wrap around the end of the file
+
+set gdefault                      " substitute all occurrences in line per default
+set history=10000                 " keep x lines of command line history
+set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
+set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
+set ideajoin
+
+" set <leader> to <space>
+let mapleader = " "
+set easymotion
+set sneak
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+map <leader>d <Action>(Debug)
+map <leader>a <Action>(GotoAction)
+map <leader>f <Action>(GotoFile)
+map <leader>g <Action>(FindInPath)
+map <leader>b <Action>(Switcher)
+map <leader>o <Action>(OptimizeImports)
+map <leader>l <Action>(ReformatCode)
+map <leader>t <Action>(Terminal.OpenInTerminal)
+map <leader>r <Action>(RenameElement)
+map <leader>s <Action>(SelectInProjectView)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <TAB> <Action>(NextTab)
+map <s-TAB> <Action>(PreviousTab)
+map <C-n> :noh<CR>
+map <C-u> <C-u>zz
+map <C-d> <C-d>zz
+
+" Toggle relative line numbers
+map <leader><leader>l :set nornu<CR>
+map <leader><leader>L :set rnu<CR>
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+
+" Running & Debugging
+
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
