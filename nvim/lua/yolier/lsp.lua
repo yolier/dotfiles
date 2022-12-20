@@ -47,7 +47,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'tsserver', 'gopls' }
+local servers = { 'tsserver', 'gopls', 'volar', 'sumneko_lua', 'kotlin_language_server'  }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
