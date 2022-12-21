@@ -20,6 +20,14 @@ vim.keymap.set('i', '<Right>', function() print 'ALARM: use --> l <-- ' end)
 -- Keymaps for better default experience
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-n>', ':noh<CR>', { silent = true })
+vim.keymap.set('n', '<leader>q', ':qa!<CR>', { desc = 'Close Vim',  silent = true })
+vim.keymap.set('n', '<leader>x', ':w | bd | bprevious<CR>', { desc = 'Close current buffer', silent = true })
+vim.keymap.set('n', '<leader>xo', ':w | %bd | e# | bd#<CR>', { desc = 'Close all other buffer', silent = true })
+
+-- Use system clipboard separately
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -27,7 +35,6 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- [[ Telescope keymaps ]]
 vim.keymap.set('n', '<leader>/', function()
-  -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
     previewer = false,
@@ -43,8 +50,8 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', 'gE', vim.diagnostic.goto_prev)
+vim.keymap.set('n', 'ge', vim.diagnostic.goto_next)
 vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end)
 
-vim.keymap.set('n', '<leader><leader>u', '<cmd>UndotreeToggle<cr>', { desc = "Open UndoTree" })
+vim.keymap.set('n', '<leader><leader>u', ':UndotreeToggle<CR>', { desc = "Open UndoTree", silent = true })

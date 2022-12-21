@@ -1,5 +1,3 @@
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Open NVimTree' })
-
 -- Better window navigation
 vim.keymap.set('n', '<C-h>', function() require('smart-splits').move_cursor_left() end, { desc = 'Move to left split' })
 vim.keymap.set('n', '<C-j>', function() require('smart-splits').move_cursor_down() end, { desc = 'Move to below split' })

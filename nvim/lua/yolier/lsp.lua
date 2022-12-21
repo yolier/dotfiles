@@ -6,7 +6,7 @@ local on_attach = function(_, bufnr)
       desc = 'LSP: ' .. desc
     end
 
-    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
+    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc, silent = true })
   end
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -39,7 +39,7 @@ local on_attach = function(_, bufnr)
       vim.lsp.buf.formatting()
     end
   end, { desc = 'Format current buffer with LSP' })
-  nmap('<leader>f', ':Format<CR>', '[D]ocument [S]ymbols')
+  nmap('<leader>f', ':Format<CR>', 'Format file')
 end
 
 -- Setup mason so it can manage external tooling
@@ -47,7 +47,7 @@ require('mason').setup()
 
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
-local servers = { 'tsserver', 'gopls', 'volar', 'sumneko_lua', 'kotlin_language_server'  }
+local servers = { 'tsserver', 'gopls', 'volar', 'sumneko_lua', 'kotlin_language_server', 'golangci_lint_ls' }
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {

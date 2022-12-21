@@ -24,4 +24,4 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Open NVimTree' })
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Open NVimTree', silent = true })
