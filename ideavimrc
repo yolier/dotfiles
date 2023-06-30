@@ -47,11 +47,17 @@ map <C-d> <C-d>zz
 map <leader><leader>l :set nornu<CR>
 map <leader><leader>L :set rnu<CR>
 
+" Error Diagnostics
+map <leader>x :bd<CR>
+map <leader>xo <Action>(CloseAllEditorsButActive)
+
+
+
+" Error Diagnostics
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 
 " Running & Debugging
-
 nnoremap ,r :action ContextRun<CR>
 nnoremap ,c :action RunClass<CR>
 nnoremap ,f :action ChooseRunConfiguration<CR>
