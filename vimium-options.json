@@ -1,0 +1,19 @@
+{
+  "searchEngines": "g: https://www.google.com/search?q=%s Google\nh: https://hoogle.haskell.org/?hoogle=%s Hoogle\nnpm: https://www.npmjs.com/search?q=%s NPM\ngopkg: https://pkg.go.dev/search?q=%s Go PKG\nmvn: https://central.sonatype.com/search?q=%s Maven\ns: https://www.startpage.com/sp/search?query=%s",
+  "searchUrl": "https://duckduckgo.com/?q=",
+  "settingsVersion": "2.0.6",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "r",
+      "pattern": "https?://localhost:6080/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://localhost:6080/*"
+    }
+  ]
+}

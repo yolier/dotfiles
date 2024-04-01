@@ -1,8 +1,9 @@
-export ZSH="$HOME/.oh-my-zsh"
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="awesomepanda"
+ZSH_THEME="codespaces"
 
-plugins=(git tmux fzf autojump)
+plugins=(git kubectl git-auto-fetch git-extras tmux fzf autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -10,29 +11,17 @@ source $ZSH/oh-my-zsh.sh
 export M2_HOME=/opt/maven
 export MAVEN_HOME=/opt/maven
 
-# PATH extensions ...
-export PATH=/opt/nvim-linux64/bin:$PATH
-export PATH=/home/sschmid/.cargo/bin:$PATH
-export PATH=${M2_HOME}/bin:${PATH}
-export PATH=/usr/local/go/bin:${PATH}
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
-
+# Example aliases
 alias vim="nvim"
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
 alias lg="lazygit"
+alias c="clear"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
 
-[ -f "/home/sschmid/.ghcup/env" ] && source "/home/sschmid/.ghcup/env" # ghcup-env
+export KUBE_EDITOR='code --wait'
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH

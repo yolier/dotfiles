@@ -1,11 +1,24 @@
 {
+  "workbench.colorTheme": "Solarized Light",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": true,
+  "redhat.telemetry.enabled": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // VIM config
   "editor.lineNumbers": "relative",
   "vim.leader": "<space>",
   "vim.smartRelativeLine": false,
   "vim.easymotion": true,
-  "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
+  "vim.incsearch": true,
   "vim.hlsearch": true,
   "vim.visualstar": true,
   "vim.sneak": true,
@@ -23,12 +36,8 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<leader>", "c"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
     },
     {
       "before": ["<leader>", "e"],
@@ -39,9 +48,52 @@
       "commands": ["workbench.action.focusSideBar"]
     },
     {
+      "before": ["<leader>", "x"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "x", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    // Finding stuff...
+    {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.showEditorsInActiveGroup"]
+    },
+    {
+      "before": ["g", "e"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "g"],
+      "commands": ["git-graph.view"]
+    },
+    // Formatting etc.
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["editor.action.organizeImports"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "l"],
+      "commands": ["eslint.executeAutofix"]
+    },
+    // Terminal stuff.
     {
       "before": ["<leader>", "T"],
       "commands": [":ter"]
@@ -54,34 +106,106 @@
       "before": ["<C-n>"],
       "commands": [":nohl"]
     },
+    // Refactoring stuf.
     {
-      "before": ["<leader>", "p"],
-      "commands": ["workbench.action.showCommands"],
-      "silent": true
+      "before": ["<leader>", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "<leader>", "r"],
+      "commands": ["editor.action.refactor"]
+    },
+    // Building, running, testing ...
+    {
+      "before": [",", "b"],
+      "commands": ["workbench.action.tasks.build"]
+    },
+    {
+      "before": [",", "."],
+      "commands": ["testing.runAtCursor"]
+    },
+    {
+      "before": [",", "f"],
+      "commands": ["testing.runCurrentFile"]
+    },
+    {
+      "before": [",", "t"],
+      "commands": ["workbench.action.tasks.test"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "<leader>", "r"],
+      "commands": ["editor.action.refactor"]
+    },
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     }
   ],
   "vim.handleKeys": {
-    "<C-a>": false,
+    "<C-a>": true,
     "<C-f>": false,
     "<C-s>": false,
     "<C-d>": true,
-    "<C-u>": true
+    "<C-u>": true,
+    "<C-n>": true
   },
-  "workbench.colorTheme": "Solarized Light",
-  "workbench.iconTheme": "material-icon-theme",
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "terminal.integrated.scrollback": 10000,
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "security.workspace.trust.untrustedFiles": "open",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "terminal.integrated.scrollback": 100000,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "vitest.enable": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  "[java]": {
+    "editor.defaultFormatter": "mwpb.java-prettier-formatter"
+  },
+  "window.menuBarVisibility": "compact",
+  "hediet.vscode-drawio.resizeImages": null,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "update.showReleaseNotes": false,
+  "workbench.editorAssociations": {
+    "*.png": "imagePreview.previewEditor"
+  },
+  "kotlin.languageServer.enabled": false,
+  "kotlin.debugAdapter.enabled": false,
+  "editor.formatOnSave": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "telemetry.telemetryLevel": "off"
 }
